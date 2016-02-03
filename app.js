@@ -2,6 +2,7 @@ var express = require('express');
 var morgan = require('morgan'); 
 var bodyParser = require('body-parser'); 
 var swig = require('swig'); 
+var sassM = require('node-sass-middleware');
 
 var app = express();
 
@@ -15,13 +16,21 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
+app.use(sassM({
+      /* Options */
+      src: __dirname + '/assets', 
+      dest: __dirname + '/public',
+      debug: true
+  }));
+
 
 // statically serve front end dependencies (bootstrap & jquery)
 
 
-// serve static files 
-app.use(express.static(__dirname + '/public'))
-
+// serve static files => match the route and search through the given folder for the files requested
+app.use(express.static(__dirname + '/public'));
+app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist'));
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist'));
 
 // middleware for our dynamic routes 
 app.use('/', require('./routes'));

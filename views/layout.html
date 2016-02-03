@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Our Excellent Trip Planner</title>
+	<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/stylesheets/thing.css">
+
+</head>
+<body>
+<!-- navigation bar -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+     <div class="container">
+       <div class="navbar-header">
+         <a class="navbar-brand" href="/">Trip Planner</a>
+       </div>
+
+       <!-- Collect the nav links, forms, and other content for toggling -->
+       <div>
+         <ul class="nav navbar-nav navbar-right">
+         	<li><a href="/contact">Home</a></li>
+         	<li><a href="/contact">About</a></li>
+           <li><a href="/contact">Contact</a></li>
+         </ul>
+       </div><!-- /.navbar-collapse -->
+     </div><!-- /.container -->
+   </nav>
+<!-- selector box -->
+{% block content %}{% endblock %}
+
+
+
+<script src="/bootstrap/js/bootstrap.min.js" type="text/javascipt"></script>
+<script src = "/jquery/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/scripts/map.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhfhIh-xH_ZRbDAMFIBT9Yx1HfjPmI5lg&sensor=true"></script>
+</body>
+</html>
+
+<!-- //src javascipt
+//href css -->

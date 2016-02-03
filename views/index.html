@@ -1,0 +1,45 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<div class = "container">
+  <div class="row">
+    <div id="map" class="col-lg-9">
+      
+    </div>
+    <div class="container col-lg-3" id='trip-info'>
+      <div id='selectors'>
+      <label for="hotel-selector">Hotels:</label><br>
+        <select id="hotel-selector">
+        {% for hotel in all_hotels %}
+          <option value='{{hotel.name}}'>{{hotel.name}}</option>
+        {% endfor %}
+        </select>
+        <br>
+      <label for="restaurant-selector">Restaurants:</label><br>
+        <select id="restaurant-selector">
+        {% for restaurant in all_restaurants %}
+          <option value='{{restaurant.name}}'>{{restaurant.name}}</option>
+        {% endfor %}
+        </select>
+        <br>
+      <label for="activity-selector">Activities:</label><br>
+        <select id="activity-selector">
+        {% for activity in all_activities%}
+          <option value='{{activity.name}}'>{{activity.name}}</option>
+        {%endfor%}
+        </select>
+      </div>
+      <div id="itinerary">
+        
+      </div>
+  </div>
+  </div>
+</div>
+
+<!-- MAP -->
+
+<div id = "map">
+
+
+</div>
+{% endblock %}

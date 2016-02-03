@@ -1,0 +1,11 @@
+select {
+  width: 100%; }
+
+.row {
+  margin-top: 60px;
+  min-height: 50px; }
+
+#map {
+  height: 80vh;
+  content: "";
+  border-radius: 10px; }
