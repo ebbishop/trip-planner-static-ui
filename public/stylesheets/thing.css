@@ -2,10 +2,17 @@ select {
   width: 100%; }
 
 .row {
-  margin-top: 60px;
+  margin-top: 50px;
   min-height: 50px; }
 
 #map {
-  height: 80vh;
-  content: "";
-  border-radius: 10px; }
+  height: 100vh;
+  content: ""; }
+
+#contents {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%; }
+
+#selectors {
+  padding-top: 0px; }
